@@ -1,4 +1,4 @@
-name: Build React App
+name: Build Vite App
 
 on:
   push:
@@ -10,24 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
 
       - name: Install dependencies
         working-directory: frontend
         run: npm install --legacy-peer-deps
-  
-      - name: Build React app
+
+      - name: Build Vite app
         working-directory: frontend
         run: npm run build
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: react-build
-          path: frontend/build
+          name: vite-build
+          path: frontend/dist
