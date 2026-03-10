@@ -198,4 +198,43 @@ export const EdgeChipSVG = ({ className = "" }) => (
     <line x1="115" y1="25" x2="115" y2="35" stroke="hsl(var(--border))" strokeWidth="3" />
     <line x1="130" y1="25" x2="130" y2="35" stroke="hsl(var(--border))" strokeWidth="3" />
 
-    <line x1="70" y1="115" x
+    <line x1="70" y1="115" x2="70" y2="125" stroke="hsl(var(--border))" strokeWidth="3" />
+    <line x1="85" y1="115" x2="85" y2="125" stroke="hsl(var(--border))" strokeWidth="3" />
+    <line x1="100" y1="115" x2="100" y2="125" stroke="hsl(var(--border))" strokeWidth="3" />
+    <line x1="115" y1="115" x2="115" y2="125" stroke="hsl(var(--border))" strokeWidth="3" />
+    <line x1="130" y1="115" x2="130" y2="125" stroke="hsl(var(--border))" strokeWidth="3" />
+  </svg>
+);
+
+export const PipelineSVG = ({ className = "" }) => (
+  <svg viewBox="0 0 200 150" className={className} fill="none">
+    {/* Data / Extraction Box */}
+    <rect x="20" y="55" width="35" height="40" rx="4" fill="hsl(var(--chart-1))" opacity="0.7" />
+    <line x1="27" y1="65" x2="47" y2="65" stroke="hsl(var(--background))" strokeWidth="2" strokeLinecap="round" />
+    <line x1="27" y1="75" x2="40" y2="75" stroke="hsl(var(--background))" strokeWidth="2" strokeLinecap="round" />
+    <line x1="27" y1="85" x2="47" y2="85" stroke="hsl(var(--background))" strokeWidth="2" strokeLinecap="round" />
+
+    {/* Arrow 1 */}
+    <line x1="60" y1="75" x2="75" y2="75" stroke="hsl(var(--border))" strokeWidth="2" markerEnd="url(#arrowhead)" />
+
+    {/* Model / Processing Box */}
+    <rect x="82" y="55" width="35" height="40" rx="4" fill="hsl(var(--primary))" opacity="0.9" />
+    <circle cx="99" cy="75" r="8" stroke="hsl(var(--background))" strokeWidth="2" fill="none" />
+
+    {/* Arrow 2 */}
+    <line x1="122" y1="75" x2="137" y2="75" stroke="hsl(var(--border))" strokeWidth="2" markerEnd="url(#arrowhead)" />
+
+    {/* Deployment / Dashboard Box */}
+    <rect x="145" y="55" width="35" height="40" rx="4" fill="hsl(var(--chart-2))" opacity="0.8" />
+    <rect x="150" y="60" width="25" height="15" rx="1" fill="hsl(var(--background))" opacity="0.9" />
+    <rect x="150" y="80" width="10" height="10" rx="1" fill="hsl(var(--background))" opacity="0.9" />
+    <rect x="165" y="80" width="10" height="10" rx="1" fill="hsl(var(--background))" opacity="0.9" />
+
+    {/* Definition for the Arrowhead */}
+    <defs>
+      <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+        <polygon points="0 0, 6 3, 0 6" fill="hsl(var(--border))" />
+      </marker>
+    </defs>
+  </svg>
+);
