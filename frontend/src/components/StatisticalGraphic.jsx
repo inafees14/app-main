@@ -104,3 +104,98 @@ export const FeatureImportanceSVG = ({ className = "" }) => (
     <rect x="20" y="102" width="60" height="14" fill="hsl(var(--chart-4))" opacity="0.6" rx="2" />
   </svg>
 );
+
+export const DeepLearningSVG = ({ className = "" }) => (
+  <svg viewBox="0 0 200 150" className={className} fill="none">
+    {/* Connections - Input to Hidden */}
+    <line x1="40" y1="40" x2="100" y2="30" stroke="hsl(var(--border))" strokeWidth="1" opacity="0.4" />
+    <line x1="40" y1="40" x2="100" y2="75" stroke="hsl(var(--border))" strokeWidth="1" opacity="0.4" />
+    <line x1="40" y1="40" x2="100" y2="120" stroke="hsl(var(--border))" strokeWidth="1" opacity="0.4" />
+    
+    <line x1="40" y1="110" x2="100" y2="30" stroke="hsl(var(--border))" strokeWidth="1" opacity="0.4" />
+    <line x1="40" y1="110" x2="100" y2="75" stroke="hsl(var(--border))" strokeWidth="1" opacity="0.4" />
+    <line x1="40" y1="110" x2="100" y2="120" stroke="hsl(var(--border))" strokeWidth="1" opacity="0.4" />
+
+    {/* Connections - Hidden to Output */}
+    <line x1="100" y1="30" x2="160" y2="75" stroke="hsl(var(--primary))" strokeWidth="1.5" opacity="0.6" />
+    <line x1="100" y1="75" x2="160" y2="75" stroke="hsl(var(--primary))" strokeWidth="1.5" opacity="0.6" />
+    <line x1="100" y1="120" x2="160" y2="75" stroke="hsl(var(--primary))" strokeWidth="1.5" opacity="0.6" />
+
+    {/* Nodes: Input Layer */}
+    <circle cx="40" cy="40" r="6" fill="hsl(var(--chart-2))" />
+    <circle cx="40" cy="110" r="6" fill="hsl(var(--chart-2))" />
+
+    {/* Nodes: Hidden Layer */}
+    <circle cx="100" cy="30" r="7" fill="hsl(var(--chart-1))" />
+    <circle cx="100" cy="75" r="7" fill="hsl(var(--chart-1))" />
+    <circle cx="100" cy="120" r="7" fill="hsl(var(--chart-1))" />
+
+    {/* Nodes: Output Layer */}
+    <circle cx="160" cy="75" r="8" fill="hsl(var(--primary))" />
+  </svg>
+);
+
+export const RocCurveSVG = ({ className = "" }) => (
+  <svg viewBox="0 0 200 150" className={className} fill="none">
+    {/* Axes */}
+    <line x1="20" y1="130" x2="180" y2="130" stroke="hsl(var(--border))" strokeWidth="1.5" />
+    <line x1="20" y1="20" x2="20" y2="130" stroke="hsl(var(--border))" strokeWidth="1.5" />
+
+    {/* Random Chance Baseline (Diagonal) */}
+    <line x1="20" y1="130" x2="170" y2="30" stroke="hsl(var(--muted-foreground))" strokeWidth="1.5" strokeDasharray="4 4" opacity="0.6" />
+
+    {/* ROC Curve (High AUC) */}
+    <path
+      d="M 20 130 Q 30 30, 170 30"
+      stroke="hsl(var(--primary))"
+      strokeWidth="2.5"
+      fill="none"
+    />
+    
+    {/* AUC Fill */}
+    <path
+      d="M 20 130 Q 30 30, 170 30 L 170 130 Z"
+      fill="hsl(var(--primary))"
+      fillOpacity="0.1"
+    />
+  </svg>
+);
+
+export const TimeSeriesSVG = ({ className = "" }) => (
+  <svg viewBox="0 0 200 150" className={className} fill="none">
+    {/* Axes */}
+    <line x1="20" y1="130" x2="180" y2="130" stroke="hsl(var(--border))" strokeWidth="1.5" />
+    <line x1="20" y1="20" x2="20" y2="130" stroke="hsl(var(--border))" strokeWidth="1.5" />
+
+    {/* Data Line (ECG / Health / Drift style) */}
+    <polyline 
+      points="20,90 45,85 55,40 65,115 75,80 100,85 110,60 125,100 135,70 170,75" 
+      stroke="hsl(var(--chart-3))" 
+      strokeWidth="2" 
+      strokeLinejoin="round"
+    />
+    
+    {/* Data points */}
+    <circle cx="55" cy="40" r="3" fill="hsl(var(--chart-3))" />
+    <circle cx="65" cy="115" r="3" fill="hsl(var(--chart-3))" />
+    <circle cx="110" cy="60" r="3" fill="hsl(var(--chart-3))" />
+  </svg>
+);
+
+export const EdgeChipSVG = ({ className = "" }) => (
+  <svg viewBox="0 0 200 150" className={className} fill="none">
+    {/* Outer Chip Body */}
+    <rect x="60" y="35" width="80" height="80" rx="6" fill="hsl(var(--secondary))" opacity="0.9" />
+    
+    {/* Inner AI Core */}
+    <rect x="75" y="50" width="50" height="50" rx="3" fill="hsl(var(--primary))" opacity="0.8" />
+    <circle cx="100" cy="75" r="8" fill="hsl(var(--background))" />
+
+    {/* Circuit Pins (Top & Bottom) */}
+    <line x1="70" y1="25" x2="70" y2="35" stroke="hsl(var(--border))" strokeWidth="3" />
+    <line x1="85" y1="25" x2="85" y2="35" stroke="hsl(var(--border))" strokeWidth="3" />
+    <line x1="100" y1="25" x2="100" y2="35" stroke="hsl(var(--border))" strokeWidth="3" />
+    <line x1="115" y1="25" x2="115" y2="35" stroke="hsl(var(--border))" strokeWidth="3" />
+    <line x1="130" y1="25" x2="130" y2="35" stroke="hsl(var(--border))" strokeWidth="3" />
+
+    <line x1="70" y1="115" x
